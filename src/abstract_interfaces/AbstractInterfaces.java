@@ -1,4 +1,4 @@
-package Abstract_Interfaces;
+package abstract_interfaces;
 
 public class AbstractInterfaces {
     public static void main(String[] args) {

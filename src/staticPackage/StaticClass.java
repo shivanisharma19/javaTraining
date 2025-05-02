@@ -1,4 +1,4 @@
-package Static;
+package staticPackage;
 
 public class StaticClass {
     /************************* Static ***********************/
@@ -7,7 +7,7 @@ public class StaticClass {
         display();
     }
 
-
+    // main is static because otherwise we need an object reference to invoke main and object cannot be created unless the execution is started- Catch22 problem
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
