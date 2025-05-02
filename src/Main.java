@@ -1,6 +1,6 @@
 
 public class Main {
-    //Static
+    /**************** Static ****************/
     static {
         System.out.println("Static block 1");
         display();
@@ -16,11 +16,15 @@ public class Main {
         m2.string();
 
 
+        //interfaces with same method
+        H h = new H();
+        h.print();
     }
 
     void string() {
 
-        //String - immutable vs StringBuffer - mutable vs StringBuilder - mutable
+        /******************* String - immutable *******************/
+        //  vs StringBuffer - mutable vs StringBuilder - mutable
 
         String s1 = new String("abc"); //create new object every time
         String s2 = new String("abc"); //create new object every time
@@ -45,7 +49,7 @@ public class Main {
 
     }
 
-    //Array
+    /*************** Array ********************/
     void array() {
 
         int[][] newArr = new int[][]{{11, 12}, {13}, {4, 5, 7}};
@@ -62,7 +66,7 @@ public class Main {
 
     }
 
-    //final keyword
+    /********** final keyword ************/
     // final variable - constant value
     final int a = 10;
     // a = 8; //error
@@ -86,8 +90,69 @@ public class Main {
         System.out.println("Static block 2");
     }
 }
+
 //final class cannot be inherited
 final class B {}
 
 //class C extends B {} // error
+
+
+
+/******** abstract ************/
+abstract class C {} //no object can be created of this
+
+abstract class D {      //if class has one abstract method then class mandatorily should be abstract
+    abstract void display();
+    void print() { }
+}
+
+class E extends  D {
+     void display() {} //Class 'E' must either be declared abstract or implement abstract method 'display()'
+}
+
+
+/****************** interface ********************/
+class F {
+    int num; // access specifier - default
+}
+
+interface  IA {
+    int num = 10; /* access specifier - public and cannot be anything else
+                      static and final
+                    */
+    void print(); /* cannot be static
+                    public and abstract
+                   */
+}
+
+interface IB extends IA{}
+
+class G extends F implements IA, IB {
+    public void print(){} /* assign abstract/public specifically
+                             as by default interface methods are public and
+                             class methods are default which is weaker specifier */
+}
+
+// both interfaces having same methods name and signature
+
+class H implements IC, ID {
+  public void print(){
+      System.out.println("class");
+  }
+}
+
+interface IC {
+    default void print() {
+        System.out.println("IC");
+    }
+}
+
+interface ID {
+    default void print() {
+        System.out.println("ID");
+    }
+}
+
+
+
 
