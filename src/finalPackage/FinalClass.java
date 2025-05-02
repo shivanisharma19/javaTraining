@@ -1,4 +1,4 @@
-package Final;
+package finalPackage;
 
 public class FinalClass {
 
@@ -6,7 +6,6 @@ public class FinalClass {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
-
 
     /********** final keyword ************/
     // final variable - constant value

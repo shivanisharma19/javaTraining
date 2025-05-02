@@ -1,4 +1,4 @@
-package Static;
+package staticPackage;
 
 public class StaticClass {
     /************************* Static ***********************/

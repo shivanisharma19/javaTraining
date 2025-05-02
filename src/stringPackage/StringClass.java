@@ -1,4 +1,4 @@
-package String;
+package stringPackage;
 
 public class StringClass {
     /**************** Static ****************/
