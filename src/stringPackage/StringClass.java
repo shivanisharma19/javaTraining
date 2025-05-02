@@ -10,6 +10,8 @@ public class StringClass {
         StringClass m2 = new StringClass();
         m2.string();
 
+        toStringMethod obj = new toStringMethod(4);
+        System.out.println(obj);
     }
 
     void string() {
@@ -41,6 +43,19 @@ public class StringClass {
     }
 }
 
+
+class toStringMethod{
+
+    int c;
+
+    toStringMethod(int c){
+        this.c = c;
+    }
+    // toString method overridden
+    public String toString() {
+        return "object to string" + c;
+    }
+}
 
 
 
